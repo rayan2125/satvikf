@@ -1,69 +1,46 @@
 .testimonial-container {
+    overflow: hidden;
+    white-space: nowrap;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    margin-top: 20px;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+    position: relative;
 }
 
-.testimonial {
+.scroller {
     display: flex;
-    flex-direction: column;
-    /* align-items: center;
-    text-align: center; */
-    border-radius: 15px;
-
-    /* margin: 0 20px 0 20px; */
-    margin: 15px;
-    padding: 15px 25px 15px 25px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s ease-out forwards;
-    animation-delay: 0s; /* Adjust delay dynamically if needed */
+    gap: 20px; /* Space between testimonials */
 }
 
-.testimonial-image {
+/*  */
+
+.testimonial-card {
+    background: grey;
+    color: white; /* Ensures text is visible */
+    border-radius: 20px;
+    padding: 25px;
+    margin: 10px;
+}
+
+.testimonial-img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.testimonial-text {
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.testimonial-desc {
+    /* font-size: 10px; */
+    /* font-style: italic; */
+    /* margin-bottom: 10px; */
 }
 
 .testimonial-name {
     font-weight: bold;
-    margin-bottom: 5px;
+
 }
 
 .testimonial-role {
-    color: gray;
+    font-size: 14px;
+    color: #ddd; /* Light color for role */
 }
-
-/* Keyframe animation for fade and slide-up effect */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Delay each testimonial animation based on their position in the list */
-.testimonial:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.testimonial:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.testimonial:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.testimonial:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-/* Add more delays for additional testimonials if needed */
