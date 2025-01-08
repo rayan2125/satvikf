@@ -1,0 +1,69 @@
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin-top: 20px;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    text-align: center; */
+    border-radius: 15px;
+
+    /* margin: 0 20px 0 20px; */
+    margin: 15px;
+    padding: 15px 25px 15px 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease-out forwards;
+    animation-delay: 0s; /* Adjust delay dynamically if needed */
+}
+
+.testimonial-image {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-role {
+    color: gray;
+}
+
+/* Keyframe animation for fade and slide-up effect */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay each testimonial animation based on their position in the list */
+.testimonial:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.testimonial:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.testimonial:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.testimonial:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Add more delays for additional testimonials if needed */
