@@ -1,10 +1,10 @@
 .testimonial-container {
-    overflow: hidden;
-    white-space: nowrap;
+    
+  
     display: flex;
-    align-items: center;
-    height: 100px; /* Adjust height as needed */
-    position: relative;
+    /* align-items: center; */
+    /* Adjust height as needed */
+    /* position: relative; */
 }
 
 .scroller {
@@ -15,7 +15,7 @@
 /*  */
 
 .testimonial-card {
-    background: grey;
+    /* background: grey; */
     color: white; /* Ensures text is visible */
     border-radius: 20px;
     padding: 25px;

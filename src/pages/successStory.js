@@ -18,6 +18,7 @@ const SucceStories = () => {
         <h1 style={{ textAlign: "center", fontSize: 38, marginTop: "-25px", fontWeight: "lighter", color: "black", marginBottom: 50 }}>
           Success Stories
         </h1>
+        <div></div>
         <div style={{ top: 20, flexDirection: "row", display: "flex" }}>
           <div style={{ position: "relative", display: "inline-block", right: 30 }}>
             {/* Background Image */}

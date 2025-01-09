@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import About from "@/pages/about";
 import Footer from "@/pages/footer";
 import Dashboard from "@/pages/home";
+import VerticalStepperForm from "@/pages/levelUp";
 import LevelUp from "@/pages/levelUp";
 import NewsAndUpdates from "@/pages/newsUpdates";
 import ProgramOverViews from "@/pages/programsOver";
@@ -22,7 +23,8 @@ export default function Home() {
       <Dashboard />
     </div>
       <About />
-      <LevelUp />
+      <LevelUp/>
+      {/* <LevelUp /> */}
       <ProgramOverViews />
       <SucceStories />
       <NewsAndUpdates />

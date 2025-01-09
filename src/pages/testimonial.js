@@ -2,6 +2,7 @@ import React from "react";
 // Adjust the path based on your file structure
 import "../styles/testimonial.css";
 import TestimonialScroller from "@/components/testinomial/testinomail";
+import Image from "next/image";
 
 function Testimonial() {
     const data = [
@@ -14,12 +15,13 @@ function Testimonial() {
 
     return (
         <section>
+            
             {/* {data.map((testimonial) => (
                     <div className="testimonial-card" key={testimonial.id}>
                         <img src={testimonial.img} alt={testimonial.name} className="testimonial-img" />
-                        <p className="testimonial-desc">{testimonial.des}</p>
                         <p className="testimonial-name">{testimonial.name}</p>
-                        <p className="testimonial-role">{testimonial.role}</p>
+                        <p className="testimonial-desc">{testimonial.des}</p>
+                        
                     </div>
                 ))} */}
             <TestimonialScroller baseVelocity={-20}>

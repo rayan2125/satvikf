@@ -1,0 +1,10 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh; /* Makes the page scrollable */
+}
+
+.stepper-item {
+  margin-bottom: 20px;
+}

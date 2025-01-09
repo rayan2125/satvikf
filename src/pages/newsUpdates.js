@@ -1,15 +1,19 @@
+import Blogs from "@/components/news/blog";
+import NewsAndUpdate from "@/components/news/newsUpdate";
 
 
 
 const NewsAndUpdates = () => {
     return (
       <div>
-      <h1>News and Updates  </h1>
+      <h1 className="text-center font-medium text-4xl text-gray-600 mb-10 mt-10">News and Updates  </h1>
         {/* Add your buttons here */}
-        <div className="flex gap-4 mt-8 justify-center">
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition">Button 1</button>
-          <button className="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-700 transition">Button 2</button>
-        </div>
+       
+        <NewsAndUpdate/>
+        <NewsAndUpdate/>
+        <NewsAndUpdate/>
+        <h1 className="text-center	">Explore More Blogs</h1>
+        <Blogs/>
       </div>
     );
   };
