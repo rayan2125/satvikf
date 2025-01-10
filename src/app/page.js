@@ -24,7 +24,6 @@ export default function Home() {
     </div>
       <About />
       <LevelUp/>
-      {/* <LevelUp /> */}
       <ProgramOverViews />
       <SucceStories />
       <NewsAndUpdates />

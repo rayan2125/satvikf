@@ -1,12 +1,54 @@
+import ProgramsOver from "@/components/OverViews/overViews";
 import Image from "next/image";
 
 const ProgramOverViews = () => {
-    return (
-        <div className="flex flex-row  bg-white">
+    let data = [
+        {
+            id: 1,
+            title: "Curriculum Coverage",
+            img: "/Levelup-1/2.png",
+            items: [
+                "International Baccalaureate (IB)",
+                "IGCSE (Cambridge Assessment)",
+                "Advanced Placement (AP) (Coming Soon)"
+            ]
+        },
+        {
+            id: 2,
+            title: "Exclusive Programs for Upper Secondary Students (Grades 10 - 12)",
+            img: "/Levelup-1/2.png",
+            items: [
+                "Level Up Signature Program",
+                "Premier Program",
+                "Essential Program"
+            ]
+        },
+        {
+            id: 3,
+            title: "General Tutoring",
+            img: "/Levelup-1/2.png",
+            items: [
+                "Flexible Tutoring Packages",
+                "Personalized Tutoring (Grades 6 - 12)"
+            ]
+        },
+        {
+            id: 4,
+            title: "Competition and Exam Preparations",
+            img: "/Levelup-1/2.png",
+            items: [
+                "AP Exam Preparation (Grades 9 - 12)",
+                "SAT and ACT Preparation",
+                "Specific Competitions"
+            ]
+        }
+    ];
 
-            <div className="flex-1 ">
+    return (
+        <div className="flex flex-row bg-white">
+            <div className="flex-1">
                 <div>
-                    <div className="relative top-4 ">
+                    <div className="relative top-4">
                         <Image
                             src="/About-1/header-vector.png"
                             alt="Personalized Training"
@@ -14,171 +56,26 @@ const ProgramOverViews = () => {
                             height={60}
                         />
                     </div>
-                    <h1 className="text-4xl text-black ml-10 mb-6 w-9/12 tracking-wider">Programs and Services at
-                        Level Up Learning Centre</h1>
+                    <h1 className="text-4xl text-black ml-10 mb-6 w-9/12 tracking-wider">
+                        Programs and Services at Level Up Learning Centre
+                    </h1>
                 </div>
-                <p className="text-md w-9/12 font-bold text-slate-600 ml-10 tracking-wider">At Level Up Learning Centre, we offer a comprehensive range of tutoring programs designed to meet the diverse educational needs of our students
-
+                <p className="text-md w-9/12 font-bold text-slate-600 ml-10 tracking-wider">
+                    At Level Up Learning Centre, we offer a comprehensive range of tutoring
+                    programs designed to meet the diverse educational needs of our students
                 </p>
             </div>
 
             {/* Second Section */}
-            <div className="flex-1 mt-8">
-
-
-                {/* <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-cover bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] p-6 rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-cover bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] p-6 rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-cover bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] p-6 rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500 p-2 m-2 rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div> */}
-
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-conatin bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] px-6  rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-conatin bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] px-6  rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-conatin bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] px-6  rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-conatin bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] px-6  rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    style={{ borderRadius: 40 }}
-                    className="bg-[url('/Levelup-1/1.png')] bg-conatin bg-center text-white h-[400px] flex flex-col justify-end">
-                    <div className="bg-[rgba(255,255,255,0.8)] px-6  rounded-b-lg">
-                        <h2 className="text-2xl font-bold text-black">Curriculum Coverage</h2>
-                        <ul className="flex flex-wrap mt-2">
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                International Baccalaureate (IB)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                IGCSE (Cambridge Assessment)
-                            </li>
-                            <li className="bg-gradient-to-r from-blue-100 to-blue-500  rounded-full font-bold">
-                                Advanced Placement (AP) (Coming Soon)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
+            <div className="flex-1 mt-8 px-10 gap-y-2">
+                {data.map((program) => (
+                    <ProgramsOver
+                        key={program.id} // Ensure each component has a unique key
+                        imageUrl={program.img} // Pass the image URL
+                        title={program.title} // Pass the title
+                        items={program.items} // Pass the items array
+                    />
+                ))}
             </div>
         </div>
     );
