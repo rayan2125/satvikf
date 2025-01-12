@@ -1,4 +1,4 @@
-'use client';  
+'use client';
 
 import Navbar from "@/components/Navbar/Navbar";
 import Blogs from "@/components/news/blog";
@@ -16,8 +16,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-  
-        <Dashboard />
+
+      <Dashboard />
       <About />
       <LevelUp />
       <ProgramOverViews />
