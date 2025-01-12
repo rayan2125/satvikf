@@ -3,103 +3,110 @@ import Image from "next/image"; // Make sure to import Image
 const Footer = () => {
     // console.log("../../public/logo.png")
     return (
-        <footer className="bg-gray-800 text-white py-8 mt-16">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Section 1: Welcome Text and Image */}
-                    <div>
+        <footer className="bg-black text-white py-8 mt-36">
+            <div className="container mx-auto px-6 mt-24">
+                <div className="flex">
+
+                    <div style={{ width: "40%" }}>
                         <div className="mb-4">
                             <Image
-                                src="/Footer/logo.png" // Replace with your image path
-                                alt="Logo "
-                                width={100} // Set appropriate width
-                                height={100} // Set appropriate height
-                            // Optional: Add styles if needed
+                                src="/Footer/logo.png"
+                                alt="Logo"
+                                width={80}
+                                height={80}
+
                             />
                         </div>
-                        <p>
+                        <p className="text-sm w-9/12">
                             Welcome to Level Up Learning Centre, where our commitment to educational excellence helps shape the future leaders of tomorrow.
                         </p>
                     </div>
 
-                    {/* Section 2: Quick Links */}
-                    <div>
-                        <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-                        <div className="mb-4">
-                            <Image
-                                src="/Footer/underline.png" // Replace with your image path
-                                alt="UderLine"
-                                width={50} // Set appropriate width
-                                height={20} // Set appropriate height
-                                className="rounded-full" // Optional: Add styles if needed
-                            />
+                    <div className="flex justify-between w-full">
+
+                        <div className="w-1/3">
+                            <h3 className="text-xl font-bold mb-1">Quick Links</h3>
+                            <div className="mb-4">
+                                <Image
+                                    src="/Footer/underline.png"
+                                    alt="UderLine"
+                                    width={50}
+                                    height={20}
+                                    className="rounded-full"
+                                />
+                            </div>
+                            <ul className="flex flex-col gap-2">
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-light tracking-wider">Home</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-light tracking-wider">About Us</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-light tracking-wider">Why Choose Level Up</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-light tracking-wider">Testimonial</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-light tracking-wider">Programs</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-light tracking-wider">FAQ</a></li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li><a href="/" className="hover:text-gray-400">Home</a></li>
-                            <li><a href="/" className="hover:text-gray-400">About Us</a></li>
-                            <li><a href="/" className="hover:text-gray-400">Why Choose Level Up</a></li>
-                            <li><a href="/" className="hover:text-gray-400">Testimonial</a></li>
-                            <li><a href="/" className="hover:text-gray-400">Programs</a></li>
-                            <li><a href="/" className="hover:text-gray-400">FAQ</a></li>
-                        </ul>
-                    </div>
 
-                    {/* Section 3: Programs */}
-                    <div>
-                        <h3 className="text-xl font-bold mb-4">Programs</h3>
-                        <Image
-                            src="/Footer/underline.png" // Replace with your image path
-                            alt="UderLine"
-                            width={50} // Set appropriate width
-                            height={20} // Set appropriate height
-                            className="rounded-full" // Optional: Add styles if needed
-                        />
-                        <ul>
-                            <li><a href="/" className="hover:text-gray-400">General Tutoring</a></li>
-                            <li><a href="/" className="hover:text-gray-400">Competition and Exam Preparations</a></li>
-                            <li><a href="/" className="hover:text-gray-400">Exclusive Programs for Upper Secondary Students (Grades 10-12)</a></li>
-                            <li><a href="/" className="hover:text-gray-400">Curriculum Coverage</a></li>
-                        </ul>
-                    </div>
 
-                    {/* Section 4: Contact Information */}
-                    <div>
-                        <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-                        <Image
-                            src="/Footer/underline.png" // Replace with your image path
-                            alt="UderLine"
-                            width={50} // Set appropriate width
-                            height={20} // Set appropriate height
-                            className="rounded-full" // Optional: Add styles if needed
-                        />
+                        <div className="w-1/3">
+                            <h3 className="text-xl font-bold mb-1 ">Programs</h3>
+
+                            <div className="mb-4">
+                                <Image
+                                    src="/Footer/underline.png"
+                                    alt="UderLine"
+                                    width={50}
+                                    height={20}
+                                    className="rounded-full"
+                                />
+                            </div>
+                            <ul className="flex flex-col gap-2">
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-ligth tracking-wider ">General Tutoring</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-ligth tracking-wider">Competition and Exam Preparations</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-ligth tracking-wider">Exclusive Programs for Upper Secondary Students (Grades 10-12)</a></li>
+                                <li><a href="/" className="hover:text-gray-400 text-xs font-ligth tracking-wider">Curriculum Coverage</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div className="w-1/3 ">
+                            <h3 className="text-xl font-bold mb-1">Contact Us</h3>
+                            <div className="mb-4">
+                                <Image
+                                    src="/Footer/underline.png"
+                                    alt="UderLine"
+                                    width={50}
+                                    height={20}
+                                    className="rounded-full"
+                                />
+                            </div>
+                        
                         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                             <Image
-                                src="/Footer/location.png" // Replace with your image path
+                                src="/Footer/location.png"
                                 alt="Location Icon"
-                                width={20} // Set appropriate width
-                                height={40} // Set appropriate height
-                                className="rounded-full" // Optional: Add styles if needed
+                                width={20}
+                                height={40}
+                                className="rounded-full"
                             />
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p className="hover:text-gray-400 text-sd font-ligth wider">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
 
                         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                             <Image
-                                src="/Footer/call.png" // Replace with your image path
+                                src="/Footer/call.png"
                                 alt="Mail Icon"
-                                width={20} // Set appropriate width
-                                height={40} // Set appropriate height
-                                className="rounded-full" // Optional: Add styles if needed
+                                width={20}
+                                height={40}
+                                className="rounded-full"
                             />
-                            <p>+91-12345-12459</p>
+                            <p className="hover:text-gray-400 text-sd font-ligth wider">+91-12345-12459</p>
                         </div>
                         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                             <Image
-                                src="/mail.png" // Replace with your image path
+                                src="/mail.png"
                                 alt="Mail Icon"
-                                width={20} // Set appropriate width
-                                height={40} // Set appropriate height
-                                className="rounded-full" // Optional: Add styles if needed
+                                width={20}
+                                height={40}
+                                className="rounded-full"
                             />
                             <p style={{ margin: 0 }}>
 
@@ -108,16 +115,16 @@ const Footer = () => {
                                 </a>
                             </p>
                         </div>
-
+</div>
                     </div>
                 </div>
-            <div
-                style={{ background: 'grey', height: .5,marginTop:25 }}
-            >
+                <div
+                    style={{ background: 'grey', height: .5, marginTop: 25 }}
+                >
 
+                </div>
             </div>
-            </div>
-            <div className="text-center text-sm py-4 ">
+            <div className="text-center text-sm mt-4">
                 <p>&copy; 2025 Level Up Learning Centre. All Rights Reserved.</p>
             </div>
         </footer>

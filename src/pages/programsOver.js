@@ -70,10 +70,11 @@ const ProgramOverViews = () => {
             <div className="flex-1 mt-8 px-10 gap-y-2">
                 {data.map((program) => (
                     <ProgramsOver
-                        key={program.id} // Ensure each component has a unique key
-                        imageUrl={program.img} // Pass the image URL
-                        title={program.title} // Pass the title
-                        items={program.items} // Pass the items array
+                    id={program.id}
+                        key={program.id} 
+                        imageUrl={program.img} 
+                        title={program.title} 
+                        items={program.items} 
                     />
                 ))}
             </div>

@@ -1,26 +1,49 @@
-/* Basic Styling for Navbar */
+/* Style for the navbar container */
 .navbar {
-  background-color: #333;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 100px;
+border-radius: 50px;
+  background-color: #333; 
+   
 }
 
-.navbar ul {
-  list-style-type: none;
+/* Header Section to align logo and links in a row */
+.navbar-header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; /* Space between logo and navbar links */
+}
+
+/* Logo container */
+.logo-container {
+  margin-right: 20px;  /* Optional, space between logo and navbar links */
+}
+
+/* Navbar links container */
+.navbar-links-container {
+  display: flex;
+ 
+  
+}
+
+/* Style for the navbar list */
+ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
-.navbar li {
-  display: inline-block;
-  margin: 0 15px;
+
+
+ul li a {
+  text-decoration: none;
+  color: white
 }
+
 
 .navbar a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  
   padding: 10px;
   transition: all 0.3s ease; /* Added transition */
 }

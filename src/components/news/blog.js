@@ -2,37 +2,43 @@ import Image from "next/image";
 
 const Blogs = () => {
     return (
-        <div className="container mx-auto px-4">
-            <div className="bg-blue-600 shadow-lg rounded-lg p-6 relative">
-                <div className="flex flex-wrap">
-                    <div className="w-full md:w-1/2">
+        <div className="container absolute  -top-20 mx-auto mb-16 px-20 ml-10">
+            <div className=" shadow-lg rounded-lg relative " style={{borderRadius:30 ,background:'#070675'}}>
+                <div className="flex relative "> {/* Make the parent flex container relative */}
+                    <div className=" px-16">
                         <div className="mb-4">
-                            <h1 className="text-5xl text-white mb-10">Ready to Begin</h1>
-                            <h1 className="text-5xl text-white">Your Child’s New Journey?</h1>
+                            <h1 className="text-4xl text-white mb-4 mt-4 tracking-wider">Ready to Begin</h1>
+                            <h1 className="text-2xl text-white font-bold tracking-wider">Your Child’s New Journey?</h1>
                         </div>
-                        <div className="mb-4">
-                            <b className="text-gray-700">
+                        <div className="mb-4 ">
+                            <b className="text-slate-900 text-bold tracking-wider">
                                 Every moment in your child’s early years is crucial. Our programs are designed to inspire curiosity, and build essential skills that will last a lifetime.
                             </b>
                         </div>
-                        <div>
-                            <button className="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
+                        <div className="mb-8">
+                            <button className="bg-yellow-500 text-black py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
                                 Apply Now!
                             </button>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center items-center relative">
-                        <Image
-                            src="/7-CTA/image.png"
-                            alt="Personalized Training"
-                            width={700}
-                            height={800}
-                            className="rounded-lg absolute " // Adjust this as needed for overlap
-                        />
-                    </div>
+
+                    {/* This div will now overlap the other div */}
+
+                    <Image
+                        src="/7-CTA/image.png"
+                        alt="Personalized Training"
+                        width={500} // Increased image width
+                        height={300} // Increased image height
+                        className="rounded-lg -mt-24 object-cover w-full md:w-1/2 top-0 left-0 z-10 " 
+                        objectFit="cover"
+                        // Negative margin to move the image upwards
+                    />
+
                 </div>
             </div>
         </div>
+
+
     );
 };
 

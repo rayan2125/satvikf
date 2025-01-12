@@ -1,11 +1,27 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Dashboard = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Function to open the modal
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    // Function to close the modal
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <>
+        <div className="items-center justify-items-center">
+
             <Navbar />
+        </div>
             <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center" style={{ background: 'black' }}>
 
                 <div className="flex items-center justify-center gap-4">
@@ -40,14 +56,15 @@ const Dashboard = () => {
                             >
                                 Academic Journey
                             </motion.span>
-                        </motion.h1>
-                        <motion.h1
-                            className="text-l font-bold text-gray-500 text-center mt-4"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 1, delay: 1 }}
-                        >
-                            Personalized Tutoring, Engaging Classes, and a Pathway to Success
+                            <div className="mb-4">
+                                <Image
+                                    src="/Footer/underline.png" 
+                                    alt="UderLine"
+                                    width={50} 
+                                    height={20} 
+                                    className="rounded-full" 
+                                />
+                            </div>
                         </motion.h1>
                     </div>
 
@@ -66,9 +83,9 @@ const Dashboard = () => {
                     </motion.div>
                 </div>
 
-                {/* Buttons Animation */}
                 <div className="flex gap-4 mt-8 justify-center">
                     <motion.button
+                        onClick={openModal}  // Trigger the modal open
                         className="text-grey font-bold py-2 px-6"
                         style={{
                             background: '#FAA31B',
@@ -83,9 +100,9 @@ const Dashboard = () => {
                     </motion.button>
 
                     <motion.button
-                        className="text-grey font-bold py-2 px-6"
+                        className="text-slate-400 font-bold py-2 px-6"
                         style={{
-                            background: '#ffff', // Custom green color
+                            background: '#ffff', 
                             borderRadius: "10px"
                         }}
                         initial={{ x: 200, opacity: 0 }}
@@ -95,16 +112,60 @@ const Dashboard = () => {
                         Explore Programs
                     </motion.button>
                 </div>
-                {/* <div style={{}}>
 
-                </div>
-                <Image src={"/Hero/common-ellipse.png"}
-                    height={1000}
-                    width={1000}
-                     alt="Rocket"
-                     style={{position:'absolute',right:-100}}
-                /> */}
-                {/* Video and Lab Image */}
+             
+                {isModalOpen && (
+                    <div className="fixed inset-0 z-10 bg-black bg-opacity-20 flex justify-center items-center" style={{background:'rgba(0,0,0,.8)'}}>
+                        <div className="bg-white p-6 rounded-lg w-96">
+                            <h2 className="text-xl font-bold">Book a Consultation</h2>
+                            <p className="mt-4">Please fill out the details to schedule a free consultation.</p>
+                           
+                            <form>
+                                <div className="mt-4">
+                                    <label className="block text-sm">Your Name</label>
+                                    <input
+                                        type="text"
+                                        className="w-full p-2 mt-2 border rounded"
+                                        placeholder="Enter your name"
+                                    />
+                                </div>
+                                <div className="mt-4">
+                                    <label className="block text-sm">Your Email</label>
+                                    <input
+                                        type="email"
+                                        className="w-full p-2 mt-2 border rounded"
+                                        placeholder="Enter your email"
+                                    />
+                                </div>
+                                <div className="mt-4">
+                                    <label className="block text-sm">Your Message</label>
+                                    <textarea
+                                        className="w-full p-2 mt-2 border rounded"
+                                        rows="4"
+                                        placeholder="Enter any questions or details"
+                                    />
+                                </div>
+
+                                <div className="mt-6 flex justify-between">
+                                    <button
+                                        type="button"
+                                        onClick={closeModal}  // Close the modal
+                                        className="bg-red-500 text-white py-2 px-4 rounded"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        className="bg-green-500 text-white py-2 px-4 rounded"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
+
                 <div className="relative w-full h-auto mb-8 flex items-center justify-center" style={{ top: 30 }}>
                     <video
                         autoPlay
